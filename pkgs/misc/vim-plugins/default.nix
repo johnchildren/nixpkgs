@@ -187,17 +187,17 @@ rec {
   LanguageClient-neovim = let
     LanguageClient-neovim-src = fetchgit {
       url = "https://github.com/autozimu/LanguageClient-neovim";
-      rev = "fbc46862af7fa254f74f1108149fd0669c46f1ad";
-      sha256 = "1wrrmikriyw8an8hn7240igcaca9a0ykh1j0dfy45kslxkmqkk3r";
+      rev = "f5d50cda46ca96f94c0b8fe7cd3e604b3f68072f";
+      sha256 = "0s8ivz1h6j67ggg7xv6bmxz085jmw190rhpqirgsr34dnrrag84r";
     };
     LanguageClient-neovim-bin = rustPlatform.buildRustPackage {
       name = "LanguageClient-neovim-bin";
       src = LanguageClient-neovim-src;
 
-      cargoSha256 = "0c2sklpvab63a1f1mhcq9abq5m2srkj52ypq7dq44g8ngn2a05ka";
+      cargoSha256 = "1w62c8l86i10habwxb5zgfjjvlw9d5svqp5idx6fjqr2g90p0skp";
     };
   in buildVimPluginFrom2Nix {
-    name = "LanguageClient-neovim-2018-03-06";
+    name = "LanguageClient-neovim-2018-05-06";
     src = LanguageClient-neovim-src;
 
     dependencies = [];
